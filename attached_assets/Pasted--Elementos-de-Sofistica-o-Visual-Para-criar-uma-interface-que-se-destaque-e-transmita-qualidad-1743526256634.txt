@@ -1,0 +1,423 @@
+## Elementos de Sofisticação Visual
+
+Para criar uma interface que se destaque e transmita qualidade profissional, o DrGravata incorporará os seguintes elementos de design sofisticado:
+
+### Gradientes Sutis e Profundidade
+- Gradientes suaves em vez de cores sólidas para botões e áreas de destaque
+- Background com gradiente quase imperceptível para criar sensação de profundidade
+- Sistema consistente de elevação com 3-4 níveis de sombras refinadas (z-index visual)
+- Profundidade perceptível mas não exagerada (sombras de 2-4px com baixa opacidade)
+
+### Tipografia Diferenciada
+- Combinação harmoniosa de família serif para títulos (como Merriweather) e sans-serif para corpo (como Inter)
+- Variações de peso na mesma fonte para hierarquia visual natural (light 300, regular 400, medium 500, semibold 600)
+- Kerning aumentado em 3-5% para títulos, criando elegância e distinção
+- Tamanhos de fonte em escala harmônica (incrementos de 1.25)
+
+### Detalhes Refinados
+- Linhas divisórias ultrafinas (0.5px) em tom 5-10% mais escuro que o fundo
+- Sistema de ícones personalizado e consistente, evitando bibliotecas padrão
+- Acentos de cor estratégicos em pontos de interação principais
+- Padrões geométricos sutis em áreas específicas (headers, rodapés)
+- Detalhes decorativos minimalistas nas bordas de cards principais
+
+### Uso Estratégico de Espaço Negativo
+- Espaçamento generoso e levemente assimétrico entre elementos principais
+- Margens internas ampliadas (padding 24px em vez dos padrões de 16px)
+- Grid invisível mas perceptível, com alinhamentos precisos
+- Composição que respira e valoriza os elementos importantes
+
+### Efeitos Visuais Sutis
+- Backdrop filter com blur suave (5-10px) para elementos sobrepostos
+- Efeito de "glassmorphism" moderado em cards flutuantes (transparência de 85-90%)
+- Micro-parallax em elementos decorativos ou ilustrações
+- Glow suave em elementos focados ou destacados
+- Transições entre estados com sutis mudanças de opacidade
+
+### Consistência com Personalidade
+- Sistema coeso de arredondamento: 10px para cards principais, 8px para secundários, 4px para elementos menores
+- Três tons exclusivos além da paleta principal que identificam o app
+- Elementos gráficos leves que surgem em momentos estratégicos
+- Estilo visual consistente em todas as telas e componentes
+
+### Animações Distintivas
+- Linguagem de movimento própria com curvas de aceleração/desaceleração personalizadas
+- Timing curves customizadas (cubic-bezier específicos) para cada tipo de animação
+- Animações de entrada/saída assimétricas (entrada mais rápida que saída)
+- Micro-animações originais para feedback de ações importantes
+
+### Tratamento de Imagens e Gráficos
+- Filtro sutil aplicado a todas as imagens para manter coesão visual
+- Estilo de ilustração próprio e consistente, com elementos jurídicos estilizados
+- Visualizações de dados com design personalizado e elegante
+- Gráficos e charts com animações de entrada progressiva
+
+### Elementos de UI Personalizados
+- Controles customizados para todos os elementos interativos (toggles, sliders, checkboxes)
+- Botões com estados de hover elegantes e diferenciados
+- Scrollbars refinadas e estilizadas de acordo com a identidade visual
+- Menus dropdown com animações fluidas
+
+### Detalhes Inesperados
+- Pequenos elementos surpresa que aparecem em interações específicas
+- Feedback visual não convencional para ações completadas
+- Easter eggs visuais sutis que surgem em condições específicas (aniversário do escritório, marcos importantes)
+- Mensagens personalizadas que mudam conforme o uso do sistema## Responsividade e Adaptação
+
+**Comportamento Fluido em Diferentes Dispositivos:**
+- Transições suaves entre breakpoints - sem saltos abruptos de layout
+- Redimensionamento gradual de elementos conforme o espaço disponível
+- Sidebar colapsa automaticamente com animação slide-out
+- Elementos que permanecem proporcionais e mantêm seu aspecto de design
+
+**Adaptação de Componentes:**
+- Cards com resize fluido, adaptando conteúdo interno
+- Gráficos e visualizações de dados que se ajustam com animação
+- Tabelas que transformam colunas em cards agrupados com animação de reorganização
+- Botões de ação que se agrupam em menu dropdown com transição suave
+- Touch-friendly: Áreas de toque maiores em interfaces touch, com feedback visual
+
+**Transições de Estado:**
+- Mudanças de orientação do dispositivo com reorganização animada
+- Modo escuro/claro com transição de cores suave (cross-fade de 400ms)
+- Variações de densidade de informação baseadas no tamanho da tela
+- Gestos nativos integrados (swipe, pinch) com feedback visual correspondente# Interface Visual do DrGravata V1 - Assistente Jurídico
+
+## Visão Geral da Interface
+
+O DrGravata precisa de uma interface profissional que reflita seu propósito como assistente jurídico, com uma estética clean que transmita confiabilidade e eficiência. A interface deve ser organizada pelos cinco módulos principais identificados no plano técnico, apresentando fluidez visual e transições suaves entre elementos e telas para proporcionar uma experiência de uso agradável e moderna.
+
+## Princípios de Design e Fluidez Visual
+
+- **Conceitos fundamentais**:
+  - **Fluidez visual**: Transições suaves entre estados e telas (300-400ms)
+  - **Bordas arredondadas**: Todos os cards, botões e elementos interativos (8px para elementos principais, 4px para elementos secundários)
+  - **Consistência**: Comportamentos previsíveis entre módulos
+  - **Feedback visual**: Microinterações para ações do usuário (hover, click, swipe)
+  - **Profundidade sutil**: Sombras leves para indicar hierarquia (4px de offset, 10% opacidade)
+
+## Esquema de Cores e Tipografia
+
+- **Cores principais**: 
+  - Azul escuro (`#1a365d`) - cor primária, transmite profissionalismo
+  - Branco (`#ffffff`) - fundo principal, para clareza
+  - Cinza claro (`#f3f4f6`) - áreas secundárias, separação de conteúdo
+  - Azul médio (`#2c5282`) - destaques e cabeçalhos
+  - Verde (`#38a169`) - ações positivas (salvar, confirmar)
+  - Vermelho (`#e53e3e`) - alertas e prazos vencidos
+  - Gradientes sutis: Variações de 5-10% da cor principal para botões e áreas destacadas
+
+- **Tipografia**:
+  - Fonte principal: Roboto ou Inter (sans-serif)
+  - Tamanhos: 14px para texto normal, 16-18px para subtítulos, 20-24px para títulos principais
+  - Kerning: Levemente aumentado para melhor legibilidade em textos jurídicos
+
+## Layout Base
+
+### 1. Layout Principal
+
+**Sidebar de Navegação (lado esquerdo, fixa):**
+- Logo DrGravata no topo
+- Menu de navegação vertical com ícones e texto:
+  - Dashboard
+  - Clientes
+  - Processos
+  - Prazos
+  - Peças Jurídicas
+  - Assistente IA
+- Botão para recolher/expandir no rodapé
+- Item de menu atual destacado com barra lateral e fundo mais escuro
+
+**Cabeçalho (horizontal, topo da tela):**
+- Título da página atual
+- Ícone de notificações com contador (alertas de prazos)
+- Botão de configurações
+- Indicador de status offline/online
+
+**Área de Conteúdo Principal:**
+- Ocupa todo o espaço restante
+- Utiliza sistema de cartões (cards) com sombras suaves
+- Espaçamento consistente (16-24px entre elementos)
+
+## Telas Específicas
+
+### 2. Dashboard
+
+**Layout em Grid Fluido (3x2 ou 2x2, ajustando-se suavemente conforme a resolução):**
+
+- **Card de Prazos Próximos:**
+  - Cantos arredondados (12px) com sombra sutil
+  - Título "Prazos dos Próximos 7 Dias" com ícone animado de calendário
+  - Lista com: data, descrição, processo relacionado
+  - Código de cores: verde (em dia), amarelo (próximo), vermelho (atrasado)
+  - Hover states em cada item com expansão sutil (scale: 1.02)
+  - Botão "Ver Todos" no rodapé com efeito hover elegante
+  - Transição suave ao expandir para visualização completa
+
+- **Card de Processos Recentes:**
+  - Título "Últimas Atualizações"
+  - Lista com: data de atualização, número do processo, tipo de movimento
+  - Botão para expandir detalhes em cada item
+
+- **Card de Estatísticas:**
+  - Mostrar contadores grandes:
+  - Total de clientes ativos
+  - Processos em andamento
+  - Prazos pendentes
+  - Documentos recentes
+
+- **Card de Acesso Rápido ao Assistente IA:**
+  - Botão grande "Consultar Assistente IA"
+  - Campo de texto para pergunta rápida
+  - 3-4 sugestões de perguntas frequentes pré-definidas
+
+### 3. Módulo de Clientes
+
+**Página de Listagem:**
+- Barra de pesquisa no topo
+- Filtros rápidos: Todos, Ativos, Inativos
+- Tabela com colunas:
+  - Nome/Razão Social
+  - CPF/CNPJ
+  - Tipo (PF/PJ)
+  - Contato (telefone/email)
+  - Quantidade de processos
+  - Status
+  - Ações (ícones para: visualizar, editar, excluir)
+- Paginação no rodapé
+- Botão flutuante "+" para adicionar novo cliente
+
+**Formulário de Cadastro/Edição:**
+- Organizado em seções com tabs:
+  - Dados Básicos (nome, CPF/CNPJ, etc.)
+  - Contato (telefone, email, endereço)
+  - Observações
+- Validação visual em tempo real
+- Botões: "Salvar", "Cancelar", "Excluir" (se edição)
+
+**Visualização de Cliente:**
+- Cabeçalho com nome e dados principais
+- Tabs para visualizar:
+  - Dados cadastrais
+  - Processos vinculados (com status)
+  - Prazos associados
+  - Histórico de anotações
+
+### 4. Módulo de Processos
+
+**Página de Listagem:**
+- Filtros avançados: cliente, comarca, vara, status, tipo
+- Tabela com colunas:
+  - Número CNJ (formatado)
+  - Cliente
+  - Vara/Comarca
+  - Tipo
+  - Status
+  - Última atualização
+  - Próximo prazo (se houver)
+  - Ações (visualizar, editar)
+- Indicadores visuais de status (cores ou ícones)
+
+**Visualização de Processo:**
+- Layout em tabs:
+  - **Tab Geral:**
+    - Dados básicos do processo
+    - Cliente vinculado (com link)
+    - Status atual com indicador visual
+  
+  - **Tab Andamentos:**
+    - Timeline vertical mostrando movimentações
+    - Cada item com: data, descrição, usuário
+    - Botão para adicionar novo andamento
+  
+  - **Tab Prazos:**
+    - Lista de prazos vinculados ao processo
+    - Destaque para prazos próximos/vencidos
+  
+  - **Tab Documentos:**
+    - Lista de peças jurídicas relacionadas
+    - Preview de documentos ao clicar
+    - Botão para criar nova peça a partir de modelo
+
+**Formulário de Cadastro:**
+- Campos para número CNJ com máscara e validação
+- Seletor de cliente (com busca autocomplete)
+- Campos para comarca, vara, tipo
+- Data de distribuição com seletor de calendário
+
+### 5. Módulo de Prazos
+
+**Visualização de Calendário:**
+- Alternância entre visão de mês e semana
+- Prazos destacados por cor conforme status
+- Tooltip ao passar o mouse mostrando detalhes
+
+**Visualização de Lista:**
+- Organizada por data de vencimento
+- Agrupada por semanas (atual, próxima, futuras)
+- Cada item com:
+  - Data de vencimento
+  - Descrição
+  - Processo relacionado
+  - Indicador de status (pendente, concluído, vencido)
+  - Botões de ação rápida (marcar como concluído, editar)
+
+**Formulário de Criação de Prazo:**
+- Seletor de data e hora
+- Campo de descrição
+- Vínculo com processo (seletor com busca)
+- Opção para dias úteis ou corridos
+- Configuração de alertas
+
+### 6. Módulo de Peças Jurídicas
+
+**Biblioteca de Modelos:**
+- Visualização em grid de cards
+- Filtros por categoria, tipo de documento
+- Cada card com:
+  - Nome do modelo
+  - Prévia/ícone
+  - Última utilização
+  - Ações (usar, editar, excluir)
+
+**Editor de Texto:**
+- Barra de ferramentas estilo processador de texto
+- Layout limpo, foco no conteúdo
+- Área de formatação
+- Barra lateral com:
+  - Opções de formatação avançada
+  - Campos variáveis disponíveis
+  - Histórico de versões
+- Botões para:
+  - Salvar
+  - Exportar como PDF
+  - Visualizar impressão
+  - Vincular ao processo
+
+**Documento Baseado em Modelo:**
+- Campos de preenchimento automático
+- Destaque para áreas que precisam de edição manual
+- Preview do documento final
+
+### 7. Assistente IA Jurídico
+
+**Interface de Chat:**
+- Design similar a aplicativos de mensagens
+- Mensagens do usuário alinhadas à direita
+- Respostas do assistente alinhadas à esquerda
+- Indicador de digitação quando processando
+- Campo de texto fixo na parte inferior
+- Botão de envio
+- Botão para upload de documentos para análise
+
+**Painel de Análise de Documento:**
+- Área para arrastar e soltar documentos
+- Opções de análise:
+  - Extrair entidades jurídicas
+  - Resumir documento
+  - Identificar prazos
+  - Classificar tipo de documento
+- Visualização do documento com entidades destacadas
+
+**Configurações do Assistente:**
+- Ajustes de nível de detalhe
+- Preferências de resposta
+- Opção para modo econômico (otimização de recursos)
+
+## Elementos Comuns e Animações
+
+### Transições e Fluidez
+
+**Transições entre Telas:**
+- Fade suave entre mudanças de rota (250ms)
+- Deslocamento sutil de elementos ao entrar/sair (slide de 20px)
+- Manutenção de estado visual durante transições
+- Preload de dados para minimizar "jumps" de conteúdo
+
+**Microinterações:**
+- Feedback instantâneo em todos os elementos clicáveis (mudança de cor/escala)
+- Ripple effect em botões (onda circular emanando do ponto de clique)
+- Hover states em todos os elementos interativos (scale: 1.02)
+- Animações sutis de foco em campos de formulário
+
+**Navegação Fluida:**
+- Menu com indicador animado que se desloca suavemente entre itens
+- Tabs com indicador deslizante
+- Transições de Page flip (suave, como virando uma página) entre abas de conteúdo
+- Conservação de posição de scroll entre navegações relacionadas
+
+### Componentes Reutilizáveis
+
+**Notificações:**
+- Toast notifications deslizando do canto superior direito
+- Cores por tipo: sucesso (verde), erro (vermelho), informativo (azul)
+- Desaparecem automaticamente após 5 segundos com fade-out
+- Opção de fechar manualmente com animação de swipe
+- Empilhamento elegante quando múltiplas aparecem
+
+**Modais de Confirmação:**
+- Fundo escurecido com blur sutil (backdrop-filter)
+- Card central com mensagem e bordas arredondadas (12px)
+- Animação de entrada: scale + fade (300ms, ease-out)
+- Animação de saída: fade-out (200ms)
+- Botões "Confirmar" e "Cancelar" com hover e press states
+
+**Estados de Carregamento:**
+- Spinner centralizado com rotação suave para carregamentos de página
+- Skeleton screens com animação de pulse para carregamento de dados (wave effect)
+- Botões com estado de loading: spinner interno com transição suave do texto
+- Indicadores de progresso lineares para operações mais longas
+
+**Tabelas:**
+- Cabeçalhos fixos com sombra sutil ao rolar
+- Alternância de cores nas linhas com hover effect
+- Ordenação ao clicar nos cabeçalhos com indicador animado
+- Células com truncamento e tooltip para conteúdo longo
+- Row expansion com animação smooth para mostrar detalhes
+
+### Estados da Aplicação
+
+**Estado Vazio:**
+- Ilustrações simples e profissionais
+- Mensagem amigável
+- Botão de ação para começar (ex: "Adicionar seu primeiro cliente")
+
+**Estado de Erro:**
+- Página 404: ilustração com sugestões de navegação
+- Erro 500: mensagem clara com opção de retry
+- Falha de conexão: indicador de status offline com retry
+
+**Estado de Manutenção:**
+- Tela informativa com estimativa de retorno
+
+## Recursos Avançados de Usabilidade
+
+### Persistência de Contexto
+- **Manutenção de Estado**: Sistema inteligente que preserva o estado exato de cada tela (posição de scroll, filtros aplicados, ordenação, seleções)
+- **Histórico Visual**: Breadcrumbs interativos mostrando o caminho de navegação, permitindo retornar a qualquer ponto
+- **Abas Múltiplas**: Suporte a múltiplas sessões de trabalho simultâneas dentro da aplicação (similar a abas de navegador)
+- **Restauração de Sessão**: Ao reabrir o aplicativo, retorna automaticamente ao último contexto de trabalho
+
+### Feedback Visual Reconfortante
+- **Animações de Sucesso**: Confirmações visuais sutis após completar tarefas importantes (check marks animados, flash suave de cor)
+- **Indicadores de Progresso**: Barras ou círculos de progresso para operações multi-etapas ou mais longas
+- **Mensagens Contextuais**: Feedback personalizado baseado no contexto ("Ótimo! Todos os prazos da semana estão em dia", "Lembrete: 3 prazos vencem amanhã")
+- **Celebrações Discretas**: Microanimações especiais para conquistas significativas (conclusão de todos os prazos, arquivamento de processo)
+
+### Economizadores de Tempo
+- **Templates Rápidos**: Biblioteca de textos pré-formatados para comentários e anotações frequentes
+- **Preenchimento Inteligente**: Campos que se autopreenchem baseados em relações (comarca/vara a partir do número CNJ)
+- **Sugestões Contextuais**: Interface que antecipa necessidades ("Deseja criar um prazo para este novo andamento?")
+- **Ações em Lote**: Seleção múltipla para aplicar a mesma ação a vários itens de uma vez
+
+### Transições Contextuais
+- **Navegação Hierárquica Visual**: Ao entrar nos detalhes de um item, a transição visual indica "aprofundamento" (zoom suave)
+- **Expansão de Elementos**: Cards que expandem suavemente para revelar detalhes, mantendo o contexto visual
+- **Foco Dinâmico**: Redução de opacidade em elementos secundários para manter atenção no contexto ativo
+- **Preservação de Contexto**: Ao voltar de uma visualização detalhada, restaura exatamente o estado anterior da listagem
+
+### Minimalismo Progressivo
+- **Interface Adaptativa**: Começa simples e revela complexidade conforme o uso e necessidade
+- **Configurações Expansíveis**: Opções avançadas ocultas em painéis expansíveis ou menus secundários
+- **Modo Foco**: Opção para eliminar elementos distrativos durante tarefas de concentração (redação de documentos)
+- **Densidade Ajustável**: Controle sobre a quantidade de informação exibida por tela (compacto/confortável/espaçado)
