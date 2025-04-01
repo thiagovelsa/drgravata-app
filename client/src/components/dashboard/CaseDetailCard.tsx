@@ -75,12 +75,28 @@ const CaseDetailCard: React.FC<CaseDetailCardProps> = ({ caseId }) => {
               <div className="p-4 rounded-lg border border-gray-200 mb-4">
                 <h4 className="font-heading text-sm font-semibold mb-3 text-primary">Informações do Processo</h4>
                 
-                <div className="space-y-3">
-                  <InfoItem label="Número CNJ" value={legalCase.caseNumber} />
-                  <InfoItem label="Cliente" value={client?.name || "Carregando..."} />
-                  <InfoItem label="Tipo de Ação" value={legalCase.caseType} />
-                  <InfoItem label="Comarca / Vara" value={`${legalCase.court} / ${legalCase.jurisdiction}`} />
-                  <InfoItem label="Valor da Causa" value={`R$ ${parseFloat(legalCase.caseValue || "0").toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`} />
+                <div className="space-y-4">
+                  <InfoItem 
+                    label="Número CNJ" 
+                    value={legalCase.caseNumber} 
+                    isProcessNumber={true}
+                  />
+                  <InfoItem 
+                    label="Cliente" 
+                    value={client?.name || "Carregando..."} 
+                  />
+                  <InfoItem 
+                    label="Tipo de Ação" 
+                    value={legalCase.caseType} 
+                  />
+                  <InfoItem 
+                    label="Comarca / Vara" 
+                    value={`${legalCase.court} / ${legalCase.jurisdiction}`} 
+                  />
+                  <InfoItem 
+                    label="Valor da Causa" 
+                    value={`R$ ${parseFloat(legalCase.caseValue || "0").toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`} 
+                  />
                   <StatusItem status={legalCase.status} />
                 </div>
               </div>
@@ -174,13 +190,18 @@ const CaseDetailCard: React.FC<CaseDetailCardProps> = ({ caseId }) => {
 interface InfoItemProps {
   label: string;
   value: string;
+  isProcessNumber?: boolean;
 }
 
-const InfoItem: React.FC<InfoItemProps> = ({ label, value }) => {
+const InfoItem: React.FC<InfoItemProps> = ({ label, value, isProcessNumber = false }) => {
   return (
     <div>
       <p className="text-xs text-gray-500 mb-1">{label}</p>
-      <p className="text-sm font-medium">{value}</p>
+      {isProcessNumber ? (
+        <p className="case-number text-sm font-medium tracking-wide">{value}</p>
+      ) : (
+        <p className="text-sm font-medium">{value}</p>
+      )}
     </div>
   );
 };
