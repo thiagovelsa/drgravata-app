@@ -1,0 +1,49 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "package": {
+    "productName": "DrGravata",
+    "version": "0.1.0"
+  },
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devPath": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "distDir": "../dist"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "fs": {
+        "all": true,
+        "scope": ["$APPDATA/*", "$RESOURCE/*"]
+      },
+      "path": {
+        "all": true
+      },
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "process": {
+        "all": false
+      },
+      "dialog": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "identifier": "com.drgravata.app"
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "title": "DrGravata",
+        "width": 800,
+        "height": 600,
+        "resizable": true
+      }
+    ]
+  }
+}

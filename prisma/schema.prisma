@@ -1,0 +1,69 @@
+// Arquivo: prisma/schema.prisma
+
+// Este é o schema do Prisma que será usado quando a implementação real for feita
+// Atualmente, estamos usando um stub manual, mas este arquivo serve como referência
+// para a estrutura do banco de dados esperada.
+
+generator client {
+  provider = "cargo prisma"
+  output   = "../src-tauri/src/prisma.rs"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Modelo para configurações gerais do sistema
+model Configuracoes {
+  id         String   @id @default(uuid())
+  chave      String   @unique
+  valor      String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+// Modelo para informações de clientes
+model Cliente {
+  id         String   @id @default(uuid())
+  nome       String
+  cpf_cnpj   String?  @unique
+  email      String?  @unique
+  telefone   String?
+  endereco   String?
+  observacao String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  // Relacionamentos futuros
+  // atendimentos Atendimento[]
+  // consultas    Consulta[]
+}
+
+// Modelos futuros que podem ser implementados
+/*
+model Atendimento {
+  id           String   @id @default(uuid())
+  data         DateTime
+  descricao    String
+  valor        Float
+  pago         Boolean  @default(false)
+  cliente_id   String
+  cliente      Cliente  @relation(fields: [cliente_id], references: [id])
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+}
+
+model Consulta {
+  id           String   @id @default(uuid())
+  data         DateTime
+  motivo       String
+  observacoes  String?
+  confirmada   Boolean  @default(false)
+  realizada    Boolean  @default(false)
+  cliente_id   String
+  cliente      Cliente  @relation(fields: [cliente_id], references: [id])
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+}
+*/
