@@ -57,40 +57,70 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             {/* Quick Access Nav */}
             <div className="flex items-center space-x-4">
               <Link href="/">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
-                  <Home className="h-4 w-4" />
-                </Button>
+                <div className="relative group">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                    <Home className="h-4 w-4" />
+                  </Button>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+                    Início
+                  </div>
+                </div>
               </Link>
               <Link href="/clients">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
-                  <Users className="h-4 w-4" />
-                </Button>
+                <div className="relative group">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                    <Users className="h-4 w-4" />
+                  </Button>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+                    Clientes
+                  </div>
+                </div>
               </Link>
               <Link href="/cases">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
-                  <FileText className="h-4 w-4" />
-                </Button>
+                <div className="relative group">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                    <FileText className="h-4 w-4" />
+                  </Button>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+                    Processos
+                  </div>
+                </div>
               </Link>
               <Link href="/deadlines">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
-                  <Calendar className="h-4 w-4" />
-                </Button>
+                <div className="relative group">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                    <Calendar className="h-4 w-4" />
+                  </Button>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+                    Prazos
+                  </div>
+                </div>
               </Link>
               <Link href="/documents">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
-                  <FileSignature className="h-4 w-4" />
-                </Button>
+                <div className="relative group">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                    <FileSignature className="h-4 w-4" />
+                  </Button>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+                    Peças Jurídicas
+                  </div>
+                </div>
               </Link>
               <Link href="/assistant">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
-                  <MessageSquare className="h-4 w-4" />
-                </Button>
+                <div className="relative group">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                    <MessageSquare className="h-4 w-4" />
+                  </Button>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+                    Assistente IA
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
           
           <div className="flex items-center space-x-4">
-            <div className="relative">
+            <div className="relative group">
               <Button 
                 variant="ghost" 
                 size="icon" 
@@ -99,6 +129,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 <Bell className="h-5 w-5" />
                 <span className="absolute top-0 right-0 h-2 w-2 rounded-full bg-destructive"></span>
               </Button>
+              <div className="absolute -bottom-8 right-0 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+                Notificações
+              </div>
             </div>
             
             <div className="h-8 w-px bg-gray-200"></div>
@@ -117,15 +150,20 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       </div>
       
       {/* Floating Action Button */}
-      <Button 
-        className="fixed right-6 bottom-6 h-14 w-14 rounded-full bg-gradient-to-r from-primary to-accent 
-                  shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all 
-                  duration-300 hover:scale-105"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-        </svg>
-      </Button>
+      <div className="fixed right-6 bottom-6 group">
+        <Button 
+          className="h-14 w-14 rounded-full bg-gradient-to-r from-primary to-accent 
+                    shadow-lg hover:shadow-xl flex items-center justify-center text-white transition-all 
+                    duration-300 hover:scale-105"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+        </Button>
+        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50">
+          Adicionar Novo
+        </div>
+      </div>
     </div>
   );
 };
