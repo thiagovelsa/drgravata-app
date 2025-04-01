@@ -29,7 +29,7 @@ const SidebarNavigation = ({ isOpen, toggleSidebar }: SidebarNavigationProps) =>
 
   return (
     <aside className={cn(
-      "flex flex-col bg-primary text-white shadow-xl z-10",
+      "flex flex-col bg-primary text-white shadow-xl z-50 h-full",
       "transition-all duration-300 ease-in-out",
       isOpen ? "w-64" : "w-20"
     )}>

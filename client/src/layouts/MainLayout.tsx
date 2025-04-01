@@ -22,14 +22,16 @@ const MainLayout = ({ children }: MainLayoutProps) => {
 
   return (
     <div className="h-screen flex overflow-hidden antialiased text-sm">
-      {/* Sidebar */}
-      <SidebarNavigation 
-        isOpen={isSidebarOpen} 
-        toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
-      />
+      {/* Sidebar - added fixed positioning with higher z-index */}
+      <div className="fixed h-screen flex z-50">
+        <SidebarNavigation 
+          isOpen={isSidebarOpen} 
+          toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+        />
+      </div>
       
-      {/* Main content area */}
-      <div className="flex-1 flex flex-col overflow-hidden">
+      {/* Main content area - added margin-left to make space for sidebar */}
+      <div className={`flex-1 flex flex-col overflow-hidden transition-all duration-300 ${isSidebarOpen ? 'ml-64' : 'ml-20'}`}>
         {/* Header */}
         <header className="h-16 flex items-center justify-between px-6 border-b border-gray-200 bg-white shadow-subtle">
           <div className="flex items-center">
