@@ -2,15 +2,14 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { 
-  LayoutDashboard,
+  Home,
   Users, 
   FileText, 
   Calendar, 
   FileSignature, 
   MessageSquare, 
   Settings,
-  ChevronLeft,
-  ChevronRight
+  Scale
 } from "lucide-react";
 
 interface SidebarNavigationProps {
@@ -32,7 +31,7 @@ const SidebarNavigation = ({ isOpen, toggleSidebar }: SidebarNavigationProps) =>
       {/* Logo */}
       <div className="px-6 py-6 flex items-center">
         <div className="bg-[#3498db] p-2 rounded-lg mr-3">
-          <span className="text-xl font-bold">Dr</span>
+          <Scale className="h-5 w-5" />
         </div>
         <h1 className="font-heading font-bold text-xl tracking-wide">DrGravata</h1>
       </div>
@@ -40,8 +39,8 @@ const SidebarNavigation = ({ isOpen, toggleSidebar }: SidebarNavigationProps) =>
       {/* Navigation */}
       <div className="mt-8 flex-1">
         <nav className="space-y-1">
-          <NavItem href="/" icon={<LayoutDashboard className="h-5 w-5" />} isActive={isActive("/")} isOpen={true}>
-            Dashboard
+          <NavItem href="/" icon={<Home className="h-5 w-5" />} isActive={isActive("/")} isOpen={true}>
+            Início
           </NavItem>
           
           <NavItem href="/clients" icon={<Users className="h-5 w-5" />} isActive={isActive("/clients")} isOpen={true}>

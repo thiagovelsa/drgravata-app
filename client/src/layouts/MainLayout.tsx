@@ -1,8 +1,16 @@
 import { useState } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import SidebarNavigation from "@/components/ui/sidebar-navigation";
 import UserAvatar from "@/components/ui/user-avatar";
-import { Bell } from "lucide-react";
+import { 
+  Bell, 
+  Home, 
+  Users, 
+  FileText, 
+  Calendar, 
+  FileSignature, 
+  MessageSquare 
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -16,8 +24,19 @@ const MainLayout = ({ children }: MainLayoutProps) => {
 
   const getPageTitle = () => {
     const path = location.split("/")[1];
-    if (path === "") return "Dashboard";
-    return path.charAt(0).toUpperCase() + path.slice(1);
+    if (path === "") return "Início";
+    
+    // Mapeamento de rotas para títulos em português
+    const pageTitles: Record<string, string> = {
+      "clients": "Clientes",
+      "cases": "Processos",
+      "deadlines": "Prazos",
+      "documents": "Peças Jurídicas",
+      "assistant": "Assistente IA",
+      "settings": "Configurações"
+    };
+    
+    return pageTitles[path] || path.charAt(0).toUpperCase() + path.slice(1);
   };
 
   return (
@@ -33,7 +52,41 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         {/* Header */}
         <header className="h-16 flex items-center justify-between px-6 border-b border-gray-200 bg-white shadow-subtle">
           <div className="flex items-center">
-            <h2 className="font-heading text-xl font-semibold text-primary">{getPageTitle()}</h2>
+            <h2 className="font-heading text-xl font-semibold text-primary mr-6">{getPageTitle()}</h2>
+            
+            {/* Quick Access Nav */}
+            <div className="flex items-center space-x-4">
+              <Link href="/">
+                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                  <Home className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/clients">
+                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                  <Users className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/cases">
+                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                  <FileText className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/deadlines">
+                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                  <Calendar className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/documents">
+                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                  <FileSignature className="h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/assistant">
+                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full text-gray-600 hover:bg-gray-100">
+                  <MessageSquare className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
           
           <div className="flex items-center space-x-4">
