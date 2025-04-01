@@ -95,17 +95,18 @@ interface NavItemProps {
 }
 
 const NavItem = ({ href, icon, children, isActive, isOpen }: NavItemProps) => (
-  <Link href={href}>
-    <a className={cn(
+  <Link 
+    href={href}
+    className={cn(
       "sidebar-link flex items-center px-4 py-3 rounded-lg mb-1",
       "transition-all duration-300 ease-in-out",
       isActive 
         ? "border-l-4 border-accent bg-accent/10" 
         : "hover:bg-accent/5"
-    )}>
-      <span className="mr-3">{icon}</span>
-      {isOpen && <span className="font-medium">{children}</span>}
-    </a>
+    )}
+  >
+    <span className="mr-3">{icon}</span>
+    {isOpen && <span className="font-medium">{children}</span>}
   </Link>
 );
 
